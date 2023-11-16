@@ -3,8 +3,9 @@
   Анфиса для друзей. Подробное описание мороженого
 {% endblock %}
 {% block content %}
+<div class="row">
   <h1>Подробное описание мороженого</h1>
-  <h3>{{ ice_cream.title }}</h3>
+  <h3>{{ ice_cream.title|lower }}</h3>
   <p>{{ ice_cream.description }}</p>
+</div>
 {% endblock %}
- 

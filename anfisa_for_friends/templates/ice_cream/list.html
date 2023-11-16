@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 {% block title %}
   Анфиса для друзей. Каталог мороженого
 {% endblock %}
@@ -6,6 +7,15 @@
   <h1>Каталог мороженого</h1>
   <ul>
     {% for ice_cream in ice_cream_list %}
+    <div class="col-6 col-md-4 my-1">
+      <div class="card">
+        <img 
+          class="img-fluid card-img-top" 
+          height="400" width="300"
+          src="{% static 'img/image-holder.png' %}"
+        >
+      </div>
+    </div>
       <li>
         <h3>{{ ice_cream.title }}</h3>
         <p>{{ ice_cream.description|truncatewords:10 }}</p>
